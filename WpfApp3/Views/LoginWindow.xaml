@@ -1,0 +1,55 @@
+﻿<Window x:Class="WpfApp3.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3.Views"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        DataContext="{Binding Source={StaticResource Locator},Path=LoginWindow}"
+        Title="LoginWindow" Height="400" Width="760">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width='382'>
+
+            </ColumnDefinition>
+            <ColumnDefinition Width='382'>
+
+            </ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Border >
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#5F96E8" Offset="0"/>
+                    <GradientStop Color="#B2ADCB" Offset="0.9"/>
+                    <GradientStop Color="#6781B5" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <StackPanel.Effect>
+                    <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="Black" Opacity="0.8">
+
+                    </DropShadowEffect>
+                </StackPanel.Effect>
+                <TextBlock  Foreground="White" Text="Welcome" FontSize="20" HorizontalAlignment="Center"/>
+                <TextBlock  Foreground="White" Margin="0 10 0 0 " Text="某某后台管理系统"  FontSize="24" HorizontalAlignment="Center" />
+
+            </StackPanel>
+        </Border>
+        <Grid Grid.Column="1" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Margin="15" Width="270" Height="35" Tag="&#xf007;" Style="{StaticResource LoginTextBoxStyle}"/>
+            <TextBox Grid.Row="1"  Margin="15" Width="270" Height="35" Tag="&#xf023;" Style="{StaticResource LoginTextBoxStyle}"/>
+            <Button Grid.Row="2" Margin="15" Content="登陆"  Style="{StaticResource LoginButtonStyle}">
+
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
